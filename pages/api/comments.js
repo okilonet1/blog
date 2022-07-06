@@ -12,7 +12,7 @@ const token = process.env.GRAPHCMS_TOKEN;
 export default async function asynchandler(req, res) {
   const graphQLClient = new GraphQLClient(graphqlAPI, {
     headers: {
-      authorization: `Bearer ${token}`,
+      authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
     },
   });
 
